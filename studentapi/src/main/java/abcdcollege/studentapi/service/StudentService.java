@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class StudentService {
 
+    @Autowired
     private final StudentRepository studentRepository;
 
     public ResponseEntity<String> addStudent(StudentDTO studentDTO) {

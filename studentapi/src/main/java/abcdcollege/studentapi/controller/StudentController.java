@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-@NoArgsConstructor
 public class StudentController implements StudentApi {
 
-    private StudentService studentService;
+    @Autowired
+    private final StudentService studentService;
 
     @Override
     public ResponseEntity<String> addStudent(StudentDTO studentDTO) {
