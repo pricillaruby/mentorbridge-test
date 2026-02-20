@@ -20,7 +20,6 @@ public class StudentController implements StudentApi {
     private StudentService studentService;
 
     @Override
-    @PostMapping("/addStudent")
     public ResponseEntity<String> addStudent(StudentDTO studentDTO) {
         return studentService.addStudent(studentDTO);
     }
