@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Student CRUD API for ABCD College
+  version: 1.0.0
+  description: Student crud operations
+
+paths:
+  /student:
+    post:
+      tags:
+        - Student
+      summary: Add Student for ABCD college
+      operationId: addStudent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentDTO'
+
+      responses:
+        '201':
+          description: Student created
+          content:
+            application/json:
+              schema:
+                type: string
+
+components:
+  schemas:
+    StudentDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
+        department:
+          type: string
