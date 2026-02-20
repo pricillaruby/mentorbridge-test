@@ -39,6 +39,6 @@ src/main/resources
   swagger.yaml
 ```
 
-# Functionalities
+# Functionality
 
 Create: Add new student into the database. Student details are name ,age and department
