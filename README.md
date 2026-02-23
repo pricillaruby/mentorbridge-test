@@ -1,8 +1,8 @@
 
-# Student CRUD API for ABCD College
+# Employee Onboaring API for Company
 
 # Description
-This is an Spring Boot Application for an ABCD College. In this application, I have created an POST operation for adding student details. The Student Details contains name , age and department. First I have created Swagger Documentation , then Creating an Spring Boot Application where I have created Controller,Service , Entity and Repository layer and then I have implemented the swagger into the project.Then Start writing the business logic and connect with database and Run the Project . This is how the student was created.
+This is an Spring Boot Application for an Company. In this application, I have created an POST and GET operation for adding employee details and get all employees. The Employee Details contains name and age. First I have created Swagger Documentation , then Creating an Spring Boot Application where I have created Controller,Service , Entity and Repository layer and then I have implemented the swagger into the project.Then Start writing the business logic and connect with database and Run the Project . This is how the employee was created.
 
 # Technology used
 - Java 21
@@ -25,11 +25,14 @@ spring.datasource.driver-class-name = org.postgresql.Driver
 ```
 
 # API Endpoint
-POST http://localhost:8080/api/student
+POST http://localhost:8080/api/employee
+GET http://localhost:8080/api/employee
 
 # Project Structure
 ```
 src/main/java
+  config
+  mapper
   controller
   entity
   service
@@ -41,4 +44,5 @@ src/main/resources
 
 # Functionality
 
-Create: Add new student into the database. Student details are name ,age and department
+Create: Add new employee into the database. Employee details are name and age.
+Fetch Employee: Retreive all employees from the database.
