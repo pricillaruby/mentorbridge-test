@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: Employee Onboarding Process
+  version: 1.0.0
+  description: Adding an Employee
+
+paths:
+  /employee:
+    post:
+      tags:
+        - Employee
+      summary: Adding an employee
+      operationId: addEmployee
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeDTO'
+      responses:
+        '201':
+          description: Employee added successfully
+          content:
+            application/json:
+              schema:
+                type: string
+
+    get:
+      tags:
+        - Employee
+      summary: Get All Employees
+      operationId: getAllEmployee
+      responses:
+        '200':
+          description: Fetch all employees
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EmployeeDTO'
+
+components:
+  schemas:
+    EmployeeDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
