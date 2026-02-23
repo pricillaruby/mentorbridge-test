@@ -44,5 +44,11 @@ src/main/resources
 
 # Functionality
 
-Create: Add new employee into the database. Employee details are name and age.
-Fetch Employee: Retreive all employees from the database.
+- Create: Add new employee into the database. Employee details are name and age.
+- Fetch Employee: Retreive all employees from the database.
+
+
+# Flow of Application
+
+<img width="818" height="349" alt="image" src="https://github.com/user-attachments/assets/e88a4393-434b-4d67-ab7d-2b4a460520ef" />
+
