@@ -29,8 +29,8 @@ spring.datasource.driver-class-name = org.postgresql.Driver
 ```
 
 # API Endpoint
-POST http://localhost:8080/api/employee
-GET http://localhost:8080/api/employee
+- POST http://localhost:8080/api/employee
+- GET http://localhost:8080/api/employee
 
 # Functionality
 
