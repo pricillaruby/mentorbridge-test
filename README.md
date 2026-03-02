@@ -1,44 +1,35 @@
 
-# Student CRUD API for ABCD College
+# Stream API Test 
 
 # Description
-This is an Spring Boot Application for an ABCD College. In this application, I have created an POST operation for adding student details. The Student Details contains name , age and department. First I have created Swagger Documentation , then Creating an Spring Boot Application where I have created Controller,Service , Entity and Repository layer and then I have implemented the swagger into the project.Then Start writing the business logic and connect with database and Run the Project . This is how the student was created.
+The test contains the following questions:
+ 1. Given a list of integers, find out all the even numbers that exist in the list using Stream functions ?
+    10,15,8,49,25,98,32
+ 2. How to find duplicate elements in a given integers list in java using Stream functions?
+    10,15,8,49,25,98,98,32,15
+ 3. Given a list of integers, sort all the values present in it in descending order using Stream functions?
+    10,15,8,49,25,98,98,32,15
+ 4. How to find only duplicate elements with its count from the String ArrayList in Java8?
+    [“AA", "BB", "AA", "CC”]
+ 5. Mapping
+    Question: Given a list of strings representing names, map each name to its length and collect the lengths into a new list.
+       - Input: ["John", "Alice", "Bob"]
+       - Expected Output: [4, 5, 3]
+ 6. Distinct Elements:
+    Question: Given a list of integers with duplicates, remove duplicates and collect the unique elements into a new list.
+      - Input: [1, 2, 2, 3, 4, 4, 4, 5]
+      - Expected Output: [1, 2, 3, 4, 5]
+These can be solved using Stream API
 
 # Technology used
 - Java 21
-- Spring Boot
-- Spring Data Jpa
-- PostgreSQL
-- Swagger for API Documentation
-- Maven
-- Postman
-
-# DataBase Used and its Configuration
-
-PostgreSQL is used for the Student CRUD API for ABCD College.
-
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/{databasename}
-spring.datasource.username=[username]
-spring.datasource.password=[password]
-spring.datasource.driver-class-name = org.postgresql.Driver
-```
-
-# API Endpoint
-POST http://localhost:8080/api/student
-
-# Project Structure
-```
-src/main/java
-  controller
-  entity
-  service
-  repository
-src/main/resources
-  application.properties
-  swagger.yaml
-```
+- Stream API
+- Collections
 
 # Functionality
-
-Create: Add new student into the database. Student details are name ,age and department
+ 1. To find even numbers ,filter() is used . Here , we can pass number % 2 == 0 condition inside filter().
+ 2. To find duplicate elements , frequency() is used . Here , we can see the number of times particular number exists using frequency().
+ 3. To order in descending , sorted() and reverseOrder() is used.
+ 4. To find duplicate elements and count , store it in map then groupingBy() and counting() is used.
+ 5. To find length of each names in list and store it in a list , length() is used.
+ 6. To find unique elements , distinct() is used. This method only takes unique elements , removes duplicates.
