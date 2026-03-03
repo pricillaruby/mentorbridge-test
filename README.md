@@ -4,7 +4,7 @@
 1. Find the second highest number from the given list.
 Input: 10 45 67 23 89 54 89
     
-2. Find First Non-Repeated NumbeFind the first number that appears only once in the list.
+2. Find First Non-Repeated Number.Find the first number that appears only once in the list.
 Input: 4 5 1 2 0 4 5 2
  
 3. Print all duplicate numbers from the list.
@@ -38,3 +38,15 @@ Input: 1 2 3 4 5 6
 - Java 21
 - Stream API
 - Collections
+
+# Functionality 
+1. First we need to make the elements unique , use distinct() . And sort in reverseOrder using reverseOrder() , then skip the first element using skip() and finally to get second highest use findFirst().
+2. To find the first non-repeated number using frequency of the number is equal to one and using findFirst() we can get the answer.
+3. using frequency() , we can get all duplicate numbers.
+4. To know how many times the number appears , use groupingBy() and counting().
+5. To know top 3 numbers , sort in reverse order using reverseOrder() and to get first three , use limit(3).
+6. Group the numbers into even or odd , using groupingBy() and Map.
+7. To get the numbers start with digit 1 , use startsWith("1").
+8. To know common numbers between two list , use contains.
+9. Group the numbers into even or odd , using groupingBy() and Map.
+10. First to get even number use filter() and to make the squares of even number use map() then to sum the squares of even numbers , use reduce().
