@@ -1,44 +1,40 @@
-
-# Student CRUD API for ABCD College
+# Stream API Test - 03/03/2026
 
 # Description
-This is an Spring Boot Application for an ABCD College. In this application, I have created an POST operation for adding student details. The Student Details contains name , age and department. First I have created Swagger Documentation , then Creating an Spring Boot Application where I have created Controller,Service , Entity and Repository layer and then I have implemented the swagger into the project.Then Start writing the business logic and connect with database and Run the Project . This is how the student was created.
+1. Find the second highest number from the given list.
+Input: 10 45 67 23 89 54 89
+    
+3. Find First Non-Repeated NumbeFind the first number that appears only once in the list.
+Input: 4 5 1 2 0 4 5 2
+ 
+4. Print all duplicate numbers from the list.
+Input: 10 20 30 20 40 10 50 30
+ 
+5. Count how many times each number appears.
+Input: 1 2 3 2 4 1 5 1
+
+6.Find the top 3 highest numbers.
+Input: 10 80 45 60 30 90 20
+ 
+7.Partition the numbers into even and odd groups.
+Input: 10 15 20 25 30 35 40
+ 
+8. Find numbers whose first digit is 1.
+Input: 10 15 23 11 45 19 30
+
+9. Find common numbers between two lists.
+Input:
+List1: 10 20 30 40 50
+List2: 30 40 60 70
+ 
+10. Group numbers into even and odd using grouping.
+Input:
+5 10 15 20 25 35
+ 
+11. Find the sum of squares of even numbers.
+Input: 1 2 3 4 5 6
 
 # Technology used
 - Java 21
-- Spring Boot
-- Spring Data Jpa
-- PostgreSQL
-- Swagger for API Documentation
-- Maven
-- Postman
-
-# DataBase Used and its Configuration
-
-PostgreSQL is used for the Student CRUD API for ABCD College.
-
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/{databasename}
-spring.datasource.username=[username]
-spring.datasource.password=[password]
-spring.datasource.driver-class-name = org.postgresql.Driver
-```
-
-# API Endpoint
-POST http://localhost:8080/api/student
-
-# Project Structure
-```
-src/main/java
-  controller
-  entity
-  service
-  repository
-src/main/resources
-  application.properties
-  swagger.yaml
-```
-
-# Functionality
-
-Create: Add new student into the database. Student details are name ,age and department
+- Stream API
+- Collections
