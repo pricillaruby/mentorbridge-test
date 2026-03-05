@@ -1,0 +1,134 @@
+openapi: 3.0.0
+info:
+  title: Bank Application Management
+  version: 1.0.0
+  description: Creating an bank application crud APIs for account opening , deposit and withdraw amount from the bank.
+
+paths:
+  /bank/account:
+    post:
+      tags:
+        - Account
+      summary: Account Creation
+      operationId: createAccount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountDTO'
+
+      responses:
+        '201':
+          description: creating a bank account
+          content:
+            application/json:
+              schema:
+                type: string
+
+    get:
+      tags:
+        - Account
+      summary: Get all accounts
+      operationId: getAllAccounts
+      responses:
+        '200':
+          description: fetch all the accounts
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/AccountDTO'
+
+  /bank/account/{id}:
+    put:
+      tags:
+        - Account
+      summary: Get the amount and update in the balance
+      operationId: depositAmount
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type:
+              integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                accountNumber:
+                  type: string
+                depositAmount:
+                  type: integer
+      responses:
+        '201':
+          description: get amount from account holder and update balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountDTO'
+
+        '404':
+          description: Account Not found
+          content:
+            application/json:
+              schema:
+                type: string
+
+    get:
+      tags:
+        - Account
+      summary: withdraw amount from the account
+      operationId: withdrawAmount
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type:
+              integer
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                accountNumber:
+                  type: string
+                withdrawAmount:
+                  type: integer
+
+      responses:
+        '200':
+          description: get amount from account holder and update balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountDTO'
+
+        '404':
+          description: Account Not found
+          content:
+            application/json:
+              schema:
+                type: string
+
+components:
+  schemas:
+    AccountDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+        accountNumber:
+          type: string
+        name:
+          type: string
+        phoneNo:
+          type: string
+        accountType:
+          type: string
+        balanceAmount:
+          type: number
+          format: double
